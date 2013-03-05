@@ -1,0 +1,313 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		666278B916E627480054E8EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666278B816E627480054E8EB /* Cocoa.framework */; };
+		666278BB16E627480054E8EB /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666278BA16E627480054E8EB /* Python.framework */; };
+		666278C516E627480054E8EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 666278C316E627480054E8EB /* InfoPlist.strings */; };
+		666278C716E627480054E8EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 666278C616E627480054E8EB /* main.m */; };
+		666278CB16E627480054E8EB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 666278C916E627480054E8EB /* Credits.rtf */; };
+		666278CD16E627490054E8EB /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 666278CC16E627490054E8EB /* main.py */; };
+		666278CF16E627490054E8EB /* LLAppDelegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 666278CE16E627490054E8EB /* LLAppDelegate.py */; };
+		666278D216E627490054E8EB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666278D016E627490054E8EB /* MainMenu.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		666278B516E627480054E8EB /* LoginLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		666278B816E627480054E8EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		666278BA16E627480054E8EB /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = System/Library/Frameworks/Python.framework; sourceTree = SDKROOT; };
+		666278BD16E627480054E8EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		666278BE16E627480054E8EB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		666278BF16E627480054E8EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		666278C216E627480054E8EB /* LoginLog-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LoginLog-Info.plist"; sourceTree = "<group>"; };
+		666278C416E627480054E8EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		666278C616E627480054E8EB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		666278C816E627480054E8EB /* LoginLog-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoginLog-Prefix.pch"; sourceTree = "<group>"; };
+		666278CA16E627480054E8EB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		666278CC16E627490054E8EB /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
+		666278CE16E627490054E8EB /* LLAppDelegate.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = LLAppDelegate.py; sourceTree = "<group>"; };
+		666278D116E627490054E8EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		666278B216E627480054E8EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666278B916E627480054E8EB /* Cocoa.framework in Frameworks */,
+				666278BB16E627480054E8EB /* Python.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		666278AC16E627480054E8EB = {
+			isa = PBXGroup;
+			children = (
+				666278C016E627480054E8EB /* LoginLog */,
+				666278B716E627480054E8EB /* Frameworks */,
+				666278B616E627480054E8EB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		666278B616E627480054E8EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				666278B516E627480054E8EB /* LoginLog.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		666278B716E627480054E8EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				666278B816E627480054E8EB /* Cocoa.framework */,
+				666278BA16E627480054E8EB /* Python.framework */,
+				666278BC16E627480054E8EB /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		666278BC16E627480054E8EB /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				666278BD16E627480054E8EB /* AppKit.framework */,
+				666278BE16E627480054E8EB /* CoreData.framework */,
+				666278BF16E627480054E8EB /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		666278C016E627480054E8EB /* LoginLog */ = {
+			isa = PBXGroup;
+			children = (
+				666278CC16E627490054E8EB /* main.py */,
+				666278CE16E627490054E8EB /* LLAppDelegate.py */,
+				666278D016E627490054E8EB /* MainMenu.xib */,
+				666278C116E627480054E8EB /* Supporting Files */,
+			);
+			path = LoginLog;
+			sourceTree = "<group>";
+		};
+		666278C116E627480054E8EB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				666278C216E627480054E8EB /* LoginLog-Info.plist */,
+				666278C316E627480054E8EB /* InfoPlist.strings */,
+				666278C616E627480054E8EB /* main.m */,
+				666278C816E627480054E8EB /* LoginLog-Prefix.pch */,
+				666278C916E627480054E8EB /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		666278B416E627480054E8EB /* LoginLog */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 666278D516E627490054E8EB /* Build configuration list for PBXNativeTarget "LoginLog" */;
+			buildPhases = (
+				666278B116E627480054E8EB /* Sources */,
+				666278B216E627480054E8EB /* Frameworks */,
+				666278B316E627480054E8EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoginLog;
+			productName = LoginLog;
+			productReference = 666278B516E627480054E8EB /* LoginLog.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		666278AD16E627480054E8EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = LL;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Göteborgs universitet";
+			};
+			buildConfigurationList = 666278B016E627480054E8EB /* Build configuration list for PBXProject "LoginLog" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 666278AC16E627480054E8EB;
+			productRefGroup = 666278B616E627480054E8EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				666278B416E627480054E8EB /* LoginLog */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		666278B316E627480054E8EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666278C516E627480054E8EB /* InfoPlist.strings in Resources */,
+				666278CB16E627480054E8EB /* Credits.rtf in Resources */,
+				666278CD16E627490054E8EB /* main.py in Resources */,
+				666278CF16E627490054E8EB /* LLAppDelegate.py in Resources */,
+				666278D216E627490054E8EB /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		666278B116E627480054E8EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				666278C716E627480054E8EB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		666278C316E627480054E8EB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				666278C416E627480054E8EB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		666278C916E627480054E8EB /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				666278CA16E627480054E8EB /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		666278D016E627490054E8EB /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				666278D116E627490054E8EB /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		666278D316E627490054E8EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		666278D416E627490054E8EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		666278D616E627490054E8EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LoginLog/LoginLog-Prefix.pch";
+				INFOPLIST_FILE = "LoginLog/LoginLog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		666278D716E627490054E8EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "LoginLog/LoginLog-Prefix.pch";
+				INFOPLIST_FILE = "LoginLog/LoginLog-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		666278B016E627480054E8EB /* Build configuration list for PBXProject "LoginLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666278D316E627490054E8EB /* Debug */,
+				666278D416E627490054E8EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		666278D516E627490054E8EB /* Build configuration list for PBXNativeTarget "LoginLog" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				666278D616E627490054E8EB /* Debug */,
+				666278D716E627490054E8EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 666278AD16E627480054E8EB /* Project object */;
+}
