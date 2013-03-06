@@ -67,15 +67,10 @@ class LLLogWindowController(NSObject):
         self.backdropWindow.animator().setAlphaValue_(1.0)
     
     def watchLogFile_(self, logFile):
+        self.stopWatching()
         self.logFileData.removeAllLines()
         self.logView.setDataSource_(self.logFileData)
         self.logView.reloadData()
-        if self.fileHandle:
-            self.fileHandle.closeFile()
-            self.fileHandle = None
-        if self.updateTimer:
-            self.updateTimer.invalidate()
-            self.updateTimer = None
         self.fileHandle = NSFileHandle.fileHandleForReadingAtPath_(logFile)
         self.refreshLog()
         self.updateTimer = NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(
@@ -85,6 +80,14 @@ class LLLogWindowController(NSObject):
             None,
             YES
         )
+    
+    def stopWatching(self):
+        if self.fileHandle is not None:
+            self.fileHandle.closeFile()
+            self.fileHandle = None
+        if self.updateTimer is not None:
+            self.updateTimer.invalidate()
+            self.updateTimer = None
     
     def refreshLog(self):
         data = self.fileHandle.availableData()
