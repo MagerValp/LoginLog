@@ -52,7 +52,13 @@ class LLLogWindowController(NSObject):
         self.window.setCanBecomeVisibleWithoutLogin_(True)
         self.window.setLevel_(NSScreenSaverWindowLevel - 1)
         self.window.center()
+        self.window.setOpaque_(False)
+        self.window.setAlphaValue_(0.0)
         self.window.orderFrontRegardless()
+        NSAnimationContext.beginGrouping()
+        NSAnimationContext.currentContext().setDuration_(0.5)
+        self.window.animator().setAlphaValue_(1.0)
+        NSAnimationContext.endGrouping()
         
         self.backdropWindow.setCanBecomeVisibleWithoutLogin_(True)
         self.backdropWindow.setLevel_(NSStatusWindowLevel)
@@ -64,7 +70,10 @@ class LLLogWindowController(NSObject):
         self.backdropWindow.setIgnoresMouseEvents_(False)
         self.backdropWindow.setAlphaValue_(0.0)
         self.backdropWindow.orderFrontRegardless()
+        NSAnimationContext.beginGrouping()
+        NSAnimationContext.currentContext().setDuration_(2.0)
         self.backdropWindow.animator().setAlphaValue_(1.0)
+        NSAnimationContext.endGrouping()
     
     def watchLogFile_(self, logFile):
         self.stopWatching()
