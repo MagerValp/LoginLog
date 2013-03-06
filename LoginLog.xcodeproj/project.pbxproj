@@ -15,6 +15,8 @@
 		666278CD16E627490054E8EB /* main.py in Resources */ = {isa = PBXBuildFile; fileRef = 666278CC16E627490054E8EB /* main.py */; };
 		666278CF16E627490054E8EB /* LLAppDelegate.py in Resources */ = {isa = PBXBuildFile; fileRef = 666278CE16E627490054E8EB /* LLAppDelegate.py */; };
 		666278D216E627490054E8EB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666278D016E627490054E8EB /* MainMenu.xib */; };
+		6669207716E67FC800C1BD51 /* LLBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6669207616E67FC800C1BD51 /* LLBorderlessWindow.m */; };
+		66C62FE116E64529002B7100 /* LLLogWindowController.py in Resources */ = {isa = PBXBuildFile; fileRef = 66C62FE016E64529002B7100 /* LLLogWindowController.py */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,9 @@
 		666278CC16E627490054E8EB /* main.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = main.py; sourceTree = "<group>"; };
 		666278CE16E627490054E8EB /* LLAppDelegate.py */ = {isa = PBXFileReference; lastKnownFileType = text.script.python; path = LLAppDelegate.py; sourceTree = "<group>"; };
 		666278D116E627490054E8EB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		6669207516E67FC800C1BD51 /* LLBorderlessWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBorderlessWindow.h; sourceTree = "<group>"; };
+		6669207616E67FC800C1BD51 /* LLBorderlessWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBorderlessWindow.m; sourceTree = "<group>"; };
+		66C62FE016E64529002B7100 /* LLLogWindowController.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = LLLogWindowController.py; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,8 +94,11 @@
 			children = (
 				666278CC16E627490054E8EB /* main.py */,
 				666278CE16E627490054E8EB /* LLAppDelegate.py */,
+				6669207516E67FC800C1BD51 /* LLBorderlessWindow.h */,
+				6669207616E67FC800C1BD51 /* LLBorderlessWindow.m */,
 				666278D016E627490054E8EB /* MainMenu.xib */,
 				666278C116E627480054E8EB /* Supporting Files */,
+				66C62FE016E64529002B7100 /* LLLogWindowController.py */,
 			);
 			path = LoginLog;
 			sourceTree = "<group>";
@@ -164,6 +172,7 @@
 				666278CD16E627490054E8EB /* main.py in Resources */,
 				666278CF16E627490054E8EB /* LLAppDelegate.py in Resources */,
 				666278D216E627490054E8EB /* MainMenu.xib in Resources */,
+				66C62FE116E64529002B7100 /* LLLogWindowController.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				666278C716E627480054E8EB /* main.m in Sources */,
+				6669207716E67FC800C1BD51 /* LLBorderlessWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +230,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -234,8 +245,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Debug;
@@ -252,6 +264,7 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -260,7 +273,8 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = macosx;
 			};
 			name = Release;
@@ -306,6 +320,7 @@
 				666278D716E627490054E8EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

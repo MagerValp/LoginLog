@@ -7,9 +7,15 @@
 #  Copyright Göteborgs universitet 2013. All rights reserved.
 #
 
+from objc import IBOutlet
 from Foundation import *
 from AppKit import *
 
+
 class LLAppDelegate(NSObject):
+    
+    logWindowController = IBOutlet()
+    
     def applicationDidFinishLaunching_(self, sender):
-        NSLog("Application did finish launching.")
+        self.logWindowController.showLogWindow()
+        self.logWindowController.watchLogFile_(u"/var/log/system.log")
