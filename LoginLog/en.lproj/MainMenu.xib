@@ -1283,15 +1283,6 @@
 				<string key="NSMaxSize">{1024, 502}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
 			</object>
-			<object class="NSCustomObject" id="610635028">
-				<string key="NSClassName">LLAppDelegate</string>
-			</object>
-			<object class="NSCustomObject" id="15635064">
-				<string key="NSClassName">NSFontManager</string>
-			</object>
-			<object class="NSCustomObject" id="669091461">
-				<string key="NSClassName">LLLogWindowController</string>
-			</object>
 			<object class="NSWindowTemplate" id="813664464">
 				<int key="NSWindowBacking">2</int>
 				<string key="NSWindowRect">{{163, 199}, {268, 83}}</string>
@@ -1311,6 +1302,15 @@
 				<string key="NSScreenRect">{{0, 0}, {1680, 1028}}</string>
 				<string key="NSMaxSize">{10000000000000, 10000000000000}</string>
 				<bool key="NSWindowIsRestorable">YES</bool>
+			</object>
+			<object class="NSCustomObject" id="610635028">
+				<string key="NSClassName">LLAppDelegate</string>
+			</object>
+			<object class="NSCustomObject" id="15635064">
+				<string key="NSClassName">NSFontManager</string>
+			</object>
+			<object class="NSCustomObject" id="669091461">
+				<string key="NSClassName">LLLogWindowController</string>
 			</object>
 		</array>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
@@ -2861,7 +2861,7 @@
 				<boolean value="YES" key="371.IBNSWindowAutoPositionCentersVertical"/>
 				<string key="371.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="371.IBWindowTemplateEditedContentRect">{{448, 451}, {480, 360}}</string>
-				<integer value="1" key="371.NSWindowTemplate.visibleAtLaunch"/>
+				<boolean value="NO" key="371.NSWindowTemplate.visibleAtLaunch"/>
 				<string key="372.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="373.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="375.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>

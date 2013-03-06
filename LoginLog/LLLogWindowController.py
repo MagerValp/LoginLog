@@ -52,6 +52,7 @@ class LLLogWindowController(NSObject):
         self.window.setCanBecomeVisibleWithoutLogin_(True)
         self.window.setLevel_(NSScreenSaverWindowLevel - 1)
         self.window.center()
+        self.window.orderFrontRegardless()
         
         self.backdropWindow.setCanBecomeVisibleWithoutLogin_(True)
         self.backdropWindow.setLevel_(NSStatusWindowLevel)
