@@ -17,5 +17,5 @@ class LLAppDelegate(NSObject):
     logWindowController = IBOutlet()
     
     def applicationDidFinishLaunching_(self, sender):
-        self.logWindowController.showLogWindow()
+        self.logWindowController.showLogWindow_(u"/var/log/system.log")
         self.logWindowController.watchLogFile_(u"/var/log/system.log")

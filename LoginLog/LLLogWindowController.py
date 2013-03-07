@@ -14,6 +14,10 @@ from AppKit import *
 
 class LLLogViewDataSource(NSObject):
     
+    """Data source for an NSTableView that displays an array of text lines.\n"""
+    """Line breaks are assumed to be LF, and partial lines from incremental """
+    """reading is handled."""
+    
     logFileData = NSMutableArray.alloc().init()
     lastLineIsPartial = False
     
@@ -48,21 +52,32 @@ class LLLogWindowController(NSObject):
     fileHandle = None
     updateTimer = None
     
-    def showLogWindow(self):
+    def showLogWindow_(self, title):
+        # Base all sizes on the screen's dimensions.
+        screenRect = NSScreen.mainScreen().frame()
+        
+        # Open a log window that covers most of the screen.
+        self.window.setTitle_(title)
         self.window.setCanBecomeVisibleWithoutLogin_(True)
         self.window.setLevel_(NSScreenSaverWindowLevel - 1)
-        self.window.center()
-        self.window.setOpaque_(False)
-        self.window.setAlphaValue_(0.0)
         self.window.orderFrontRegardless()
+        # Resize the log window so that it leaves a border on all sides.
+        # Add a little extra border at the bottom so we don't cover the
+        # loginwindow message.
+        windowRect = screenRect.copy()
+        windowRect.origin.x = 100.0
+        windowRect.origin.y = 200.0
+        windowRect.size.width -= 200.0
+        windowRect.size.height -= 300.0
         NSAnimationContext.beginGrouping()
         NSAnimationContext.currentContext().setDuration_(0.5)
-        self.window.animator().setAlphaValue_(1.0)
+        self.window.animator().setFrame_display_(windowRect, True)
         NSAnimationContext.endGrouping()
         
+        # Create a transparent, black backdrop window that covers the whole
+        # screen and fade it in slowly.
         self.backdropWindow.setCanBecomeVisibleWithoutLogin_(True)
         self.backdropWindow.setLevel_(NSStatusWindowLevel)
-        screenRect = NSScreen.mainScreen().frame()
         self.backdropWindow.setFrame_display_(screenRect, True)
         translucentColor = NSColor.blackColor().colorWithAlphaComponent_(0.75)
         self.backdropWindow.setBackgroundColor_(translucentColor)
@@ -76,12 +91,14 @@ class LLLogWindowController(NSObject):
         NSAnimationContext.endGrouping()
     
     def watchLogFile_(self, logFile):
+        # Display and continuously update a log file in the main window.
         self.stopWatching()
         self.logFileData.removeAllLines()
         self.logView.setDataSource_(self.logFileData)
         self.logView.reloadData()
         self.fileHandle = NSFileHandle.fileHandleForReadingAtPath_(logFile)
         self.refreshLog()
+        # Kick off a timer that updates the log view periodically.
         self.updateTimer = NSTimer.scheduledTimerWithTimeInterval_target_selector_userInfo_repeats_(
             0.25,
             self,
@@ -91,6 +108,7 @@ class LLLogWindowController(NSObject):
         )
     
     def stopWatching(self):
+        # Release the file handle and stop the update timer.
         if self.fileHandle is not None:
             self.fileHandle.closeFile()
             self.fileHandle = None
@@ -99,6 +117,7 @@ class LLLogWindowController(NSObject):
             self.updateTimer = None
     
     def refreshLog(self):
+        # Check for new available data, read it, and scroll to the bottom.
         data = self.fileHandle.availableData()
         if data.length():
             utf8string = NSString.alloc().initWithData_encoding_(
