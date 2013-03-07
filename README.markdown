@@ -4,12 +4,12 @@ LoginLog
 Display a log window over the login window.
 
 
-How to test it
---------------
+How to use it
+-------------
 
 * Build LoginLog.app.
 * Copy it to a test machine as /Library/PrivilegedHelperTools/LoginLog.app
-* Copy se.gu.it.LoginLog.plist to /Library/LaunchAgents
+* Configure the logfile argument in se.gu.it.LoginLog.plist and copy it to /Library/LaunchAgents on the test machine.
 * launchctl load -S loginwindow /Library/LaunchAgents/se.gu.it.LoginLog.plist
 * launchctl unload -S loginwindow /Library/LaunchAgents/se.gu.it.LoginLog.plist
 
