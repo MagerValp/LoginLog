@@ -11,6 +11,8 @@
   <key>ProgramArguments</key>
   <array>
     <string>/Library/PrivilegedHelperTools/LoginLog.app/Contents/MacOS/LoginLog</string>
+    <string>-logfile</string>
+    <string>/var/log/system.log</string>
   </array>
   <key>RunAtLoad</key>
   <true/>
