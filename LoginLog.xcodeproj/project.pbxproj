@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05E7A08816E8DC0B00D2DEA6 /* LoginLog.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A08716E8DC0B00D2DEA6 /* LoginLog.iconset */; };
 		666278B916E627480054E8EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666278B816E627480054E8EB /* Cocoa.framework */; };
 		666278BB16E627480054E8EB /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666278BA16E627480054E8EB /* Python.framework */; };
 		666278C516E627480054E8EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 666278C316E627480054E8EB /* InfoPlist.strings */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		05E7A08716E8DC0B00D2DEA6 /* LoginLog.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = LoginLog.iconset; sourceTree = "<group>"; };
 		666278B516E627480054E8EB /* LoginLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666278B816E627480054E8EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		666278BA16E627480054E8EB /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = System/Library/Frameworks/Python.framework; sourceTree = SDKROOT; };
@@ -106,6 +108,7 @@
 		666278C116E627480054E8EB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				05E7A08716E8DC0B00D2DEA6 /* LoginLog.iconset */,
 				666278C216E627480054E8EB /* LoginLog-Info.plist */,
 				666278C316E627480054E8EB /* InfoPlist.strings */,
 				666278C616E627480054E8EB /* main.m */,
@@ -173,6 +176,7 @@
 				666278CF16E627490054E8EB /* LLAppDelegate.py in Resources */,
 				666278D216E627490054E8EB /* MainMenu.xib in Resources */,
 				66C62FE116E64529002B7100 /* LLLogWindowController.py in Resources */,
+				05E7A08816E8DC0B00D2DEA6 /* LoginLog.iconset in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
