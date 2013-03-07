@@ -15,14 +15,13 @@ from AppKit import *
 class LLAppDelegate(NSObject):
     
     logWindowController = IBOutlet()
+    prefs = NSUserDefaults.standardUserDefaults()
     
     def applicationDidFinishLaunching_(self, sender):
-        logfile = self.getPref_default_(u"logfile", u"/var/log/system.log")
+        self.prefs.registerDefaults_({
+            u"logfile": u"/var/log/system.log",
+        })
+        logfile = self.prefs.stringForKey_(u"logfile")
         self.logWindowController.showLogWindow_(logfile)
         self.logWindowController.watchLogFile_(logfile)
-    
-    def getPref_default_(self, prefName, defaultValue):
-        bundleID = NSBundle.mainBundle().bundleIdentifier()
-        value = CFPreferencesCopyAppValue(prefName, bundleID)
-        return defaultValue if value is None else value
     
