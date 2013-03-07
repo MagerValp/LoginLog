@@ -17,5 +17,12 @@ class LLAppDelegate(NSObject):
     logWindowController = IBOutlet()
     
     def applicationDidFinishLaunching_(self, sender):
-        self.logWindowController.showLogWindow_(u"/var/log/system.log")
-        self.logWindowController.watchLogFile_(u"/var/log/system.log")
+        logfile = self.getPref_default_(u"logfile", u"/var/log/system.log")
+        self.logWindowController.showLogWindow_(logfile)
+        self.logWindowController.watchLogFile_(logfile)
+    
+    def getPref_default_(self, prefName, defaultValue):
+        bundleID = NSBundle.mainBundle().bundleIdentifier()
+        value = CFPreferencesCopyAppValue(prefName, bundleID)
+        return defaultValue if value is None else value
+    
