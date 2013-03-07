@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
   <key>Label</key>
-  <string>se.gu.it.loginlog</string>
+  <string>se.gu.it.LoginLog</string>
   <key>LimitLoadToSessionType</key>
   <array>
     <string>LoginWindow</string>
