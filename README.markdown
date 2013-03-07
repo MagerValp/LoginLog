@@ -9,9 +9,9 @@ How to test it
 
 * Build LoginLog.app.
 * Copy it to a test machine as /Library/PrivilegedHelperTools/LoginLog.app
-* Copy se.gu.it.loginlog.plist to /Library/LaunchAgents
-* launchctl load -S loginwindow /Library/LaunchAgents/se.gu.it.loginlog.plist
-* launchctl unload -S loginwindow /Library/LaunchAgents/se.gu.it.loginlog.plist
+* Copy se.gu.it.LoginLog.plist to /Library/LaunchAgents
+* launchctl load -S loginwindow /Library/LaunchAgents/se.gu.it.LoginLog.plist
+* launchctl unload -S loginwindow /Library/LaunchAgents/se.gu.it.LoginLog.plist
 
 
 Credits
