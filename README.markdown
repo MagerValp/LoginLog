@@ -1,8 +1,9 @@
 LoginLog
 ========
 
-Display a log window over the login window.
+Dim the login window and display a log file of your choice over it.
 
+![loginlog](https://cloud.githubusercontent.com/assets/404393/2719374/b909345e-c55f-11e3-8c2e-7399f8e2b9a2.png)
 
 How to use it
 -------------
