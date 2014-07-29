@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		05E7A08816E8DC0B00D2DEA6 /* LoginLog.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A08716E8DC0B00D2DEA6 /* LoginLog.iconset */; };
 		666278B916E627480054E8EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666278B816E627480054E8EB /* Cocoa.framework */; };
-		666278BB16E627480054E8EB /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666278BA16E627480054E8EB /* Python.framework */; };
 		666278C516E627480054E8EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 666278C316E627480054E8EB /* InfoPlist.strings */; };
 		666278C716E627480054E8EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 666278C616E627480054E8EB /* main.m */; };
 		666278CB16E627480054E8EB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 666278C916E627480054E8EB /* Credits.rtf */; };
@@ -24,7 +23,6 @@
 		05E7A08716E8DC0B00D2DEA6 /* LoginLog.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = LoginLog.iconset; sourceTree = "<group>"; };
 		666278B516E627480054E8EB /* LoginLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666278B816E627480054E8EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		666278BA16E627480054E8EB /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = System/Library/Frameworks/Python.framework; sourceTree = SDKROOT; };
 		666278BD16E627480054E8EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		666278BE16E627480054E8EB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		666278BF16E627480054E8EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,7 +45,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				666278B916E627480054E8EB /* Cocoa.framework in Frameworks */,
-				666278BB16E627480054E8EB /* Python.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,7 +72,6 @@
 			isa = PBXGroup;
 			children = (
 				666278B816E627480054E8EB /* Cocoa.framework */,
-				666278BA16E627480054E8EB /* Python.framework */,
 				666278BC16E627480054E8EB /* Other Frameworks */,
 			);
 			name = Frameworks;
