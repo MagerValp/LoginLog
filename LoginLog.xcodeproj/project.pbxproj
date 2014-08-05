@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		05E7A08816E8DC0B00D2DEA6 /* LoginLog.iconset in Resources */ = {isa = PBXBuildFile; fileRef = 05E7A08716E8DC0B00D2DEA6 /* LoginLog.iconset */; };
 		666278B916E627480054E8EB /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666278B816E627480054E8EB /* Cocoa.framework */; };
-		666278BB16E627480054E8EB /* Python.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 666278BA16E627480054E8EB /* Python.framework */; };
 		666278C516E627480054E8EB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 666278C316E627480054E8EB /* InfoPlist.strings */; };
 		666278C716E627480054E8EB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 666278C616E627480054E8EB /* main.m */; };
 		666278CB16E627480054E8EB /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 666278C916E627480054E8EB /* Credits.rtf */; };
@@ -18,13 +17,13 @@
 		666278D216E627490054E8EB /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 666278D016E627490054E8EB /* MainMenu.xib */; };
 		6669207716E67FC800C1BD51 /* LLBorderlessWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6669207616E67FC800C1BD51 /* LLBorderlessWindow.m */; };
 		66C62FE116E64529002B7100 /* LLLogWindowController.py in Resources */ = {isa = PBXBuildFile; fileRef = 66C62FE016E64529002B7100 /* LLLogWindowController.py */; };
+		94075E0B1987F44800369D46 /* libpython2.7.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 94075E0A1987F44800369D46 /* libpython2.7.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05E7A08716E8DC0B00D2DEA6 /* LoginLog.iconset */ = {isa = PBXFileReference; lastKnownFileType = folder.iconset; path = LoginLog.iconset; sourceTree = "<group>"; };
 		666278B516E627480054E8EB /* LoginLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		666278B816E627480054E8EB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		666278BA16E627480054E8EB /* Python.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Python.framework; path = System/Library/Frameworks/Python.framework; sourceTree = SDKROOT; };
 		666278BD16E627480054E8EB /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		666278BE16E627480054E8EB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		666278BF16E627480054E8EB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -39,6 +38,7 @@
 		6669207516E67FC800C1BD51 /* LLBorderlessWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLBorderlessWindow.h; sourceTree = "<group>"; };
 		6669207616E67FC800C1BD51 /* LLBorderlessWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLBorderlessWindow.m; sourceTree = "<group>"; };
 		66C62FE016E64529002B7100 /* LLLogWindowController.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = LLLogWindowController.py; sourceTree = "<group>"; };
+		94075E0A1987F44800369D46 /* libpython2.7.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libpython2.7.dylib; path = ../../../../System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config/libpython2.7.dylib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,8 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94075E0B1987F44800369D46 /* libpython2.7.dylib in Frameworks */,
 				666278B916E627480054E8EB /* Cocoa.framework in Frameworks */,
-				666278BB16E627480054E8EB /* Python.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,8 +74,8 @@
 		666278B716E627480054E8EB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				94075E0A1987F44800369D46 /* libpython2.7.dylib */,
 				666278B816E627480054E8EB /* Cocoa.framework */,
-				666278BA16E627480054E8EB /* Python.framework */,
 				666278BC16E627480054E8EB /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -288,7 +288,16 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LoginLog/LoginLog-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
 				INFOPLIST_FILE = "LoginLog/LoginLog-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -299,7 +308,16 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LoginLog/LoginLog-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					/System/Library/Frameworks/Python.framework/Versions/2.7/include/python2.7,
+				);
 				INFOPLIST_FILE = "LoginLog/LoginLog-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
