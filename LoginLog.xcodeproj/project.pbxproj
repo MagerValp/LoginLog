@@ -94,13 +94,13 @@
 		666278C016E627480054E8EB /* LoginLog */ = {
 			isa = PBXGroup;
 			children = (
-				666278CC16E627490054E8EB /* main.py */,
 				666278CE16E627490054E8EB /* LLAppDelegate.py */,
 				6669207516E67FC800C1BD51 /* LLBorderlessWindow.h */,
 				6669207616E67FC800C1BD51 /* LLBorderlessWindow.m */,
+				66C62FE016E64529002B7100 /* LLLogWindowController.py */,
+				666278CC16E627490054E8EB /* main.py */,
 				666278D016E627490054E8EB /* MainMenu.xib */,
 				666278C116E627480054E8EB /* Supporting Files */,
-				66C62FE016E64529002B7100 /* LLLogWindowController.py */,
 			);
 			path = LoginLog;
 			sourceTree = "<group>";
@@ -145,8 +145,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = LL;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Göteborgs universitet";
+				TargetAttributes = {
+					666278B416E627480054E8EB = {
+						DevelopmentTeam = 5KQ3D3FG5H;
+					};
+				};
 			};
 			buildConfigurationList = 666278B016E627480054E8EB /* Build configuration list for PBXProject "LoginLog" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -226,7 +231,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -236,6 +240,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -260,7 +265,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
@@ -286,6 +290,8 @@
 		666278D616E627490054E8EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LoginLog/LoginLog-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -298,6 +304,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.gu.it.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -306,6 +313,8 @@
 		666278D716E627490054E8EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "Developer ID Application";
+				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "LoginLog/LoginLog-Prefix.pch";
 				HEADER_SEARCH_PATHS = (
@@ -318,6 +327,7 @@
 					"$(inherited)",
 					"$(SYSTEM_LIBRARY_DIR)/Frameworks/Python.framework/Versions/2.7/lib/python2.7/config",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "se.gu.it.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
