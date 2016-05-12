@@ -70,7 +70,7 @@ class LLLogWindowController(NSObject):
         windowRect.size.width -= 200.0
         windowRect.size.height -= 300.0
         NSAnimationContext.beginGrouping()
-        NSAnimationContext.currentContext().setDuration_(0.5)
+        NSAnimationContext.currentContext().setDuration_(0.1)
         self.window.animator().setFrame_display_(windowRect, True)
         NSAnimationContext.endGrouping()
         
@@ -86,7 +86,7 @@ class LLLogWindowController(NSObject):
         self.backdropWindow.setAlphaValue_(0.0)
         self.backdropWindow.orderFrontRegardless()
         NSAnimationContext.beginGrouping()
-        NSAnimationContext.currentContext().setDuration_(2.0)
+        NSAnimationContext.currentContext().setDuration_(1.0)
         self.backdropWindow.animator().setAlphaValue_(1.0)
         NSAnimationContext.endGrouping()
     
