@@ -4,7 +4,7 @@
 #  LoginLog
 #
 #  Created by Pelle on 2013-03-05.
-#  Copyright Göteborgs universitet 2013. All rights reserved.
+#  Copyright 2013-2016 Per Olofsson, University of Gothenburg.
 #
 
 #import modules required by application

@@ -25,7 +25,7 @@ Credits
 License
 -------
 
-    Copyright 2013 Per Olofsson, University of Gothenburg
+    Copyright 2013-2016 Per Olofsson, University of Gothenburg
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.

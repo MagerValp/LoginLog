@@ -4,7 +4,7 @@
 #  LoginLog
 #
 #  Created by Pelle on 2013-03-05.
-#  Copyright (c) 2013 Göteborgs universitet. All rights reserved.
+#  Copyright 2013-2016 Per Olofsson, University of Gothenburg.
 #
 
 from objc import YES, NO, IBAction, IBOutlet
